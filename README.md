@@ -1,18 +1,40 @@
-# Arduino_PKE_Meter
-Code and models for an arduino based Ghostbusters PKE Meter
+# Real PKE Meter #
 
-GBFans thread: http://www.gbfans.com/forum/viewtopic.php?f=5&t=43258
+*This project is currently under development.  All components have been individually tested, however the final prototype has not been completed yet*
 
-Video of how the meter looks when finished
+The goal of this project is to create a working PKE Meter (Ghostbusters) which is similar to the original's design however offers the below features:
 
-https://www.youtube.com/watch?v=xTfZLYqommg
+## Current Status ##
+**3/10/20** - I've tested individual components using source code which I combined into the final code (Real-PKE-Meter.ino).  All that's left is to test individual components using final code, program OLED display as desired, then fit into model.  Model files are currently copies of [CountDeMonet's project](https://github.com/CountDeMonet/Arduino_PKE_Meter), but will probably have to modify due to added components.
 
-I have also included the eagle cad files that I used to produce an LED board for this project. OshPark is an amazing place to get custom PCB's fabricated and they will take the brd file as is. I ended up using a buck converter to power the servo so the path with the capacitor was no longer needed. That saved some space but the board was already in fab. 
+## Features ##
+- EMF Meter (LED Wings raise on stronger signal)
+- Temperature & Humidity Readings
+- Buzzer reflecting signal strength
+- OLED display showing exact EMF reading, temperature, & humidity
 
-Image of the internals
-https://i1.wp.com/vineripesoftware.files.wordpress.com/2017/05/img_20170508_222438829.jpg
+Included *(& below)* is the initial breadboard layout which I'm currently testing.  The only addition I'm currently considering is a rocker switch to adjust sensitivity, however may try to add that via OLED screen.
+![](https://github.com/BzowK/RealPKEMeter/blob/master/Fritzing/Real-PKE-Meter_bb.png)
 
-I recommend using hitec servo wire if you can get your hands on it for the wings. I printed everything at .3mm resolution with 20% infill. This print requires a lot of support and there is no way around it.
+## Parts ##
+*Links to exact parts used will be posted once prototype is complete*
 
-It's based off this model on Thingiverse (https://www.thingiverse.com/thing:700251) I scaled it up to 110%, removed a few buttons to make it easier to use for my son, and created a new battery holder for the 4 AAA's that power it. I decided on an Arduino nano as the brains with a cheap LCD for display. Again, not going for screen accurate but something that will keep a 6-7 year old entertained. I did program in the Ghostbusters 2 LED pattern for the wings. 
+- x1 Arduino Nano
+- x1 DHT22 Sensor
+- x1 Servo *(I used an SG90S)*
+- x14 3mm LEDs
+- x1 Piezo Speaker
+- x1 0.96" OLED Display
+- x8 100ohm Resistors
+- x2 Buttons (Push)
+- x2 Toggle Switches (For Power / Sound)
+- 5V Power Source (I am currently testing with rechargeable battery + Powerboost 500)
+- 3D Printer *(I use an Ender 3 Pro with PLA)*
+- Wiring
+- Custom PCB *(Optional - Will post if one is made)*
+
+## Credit ##
+This project is inspired by CountDeMonet's [Arduino_PKE_Meter](https://github.com/CountDeMonet/Arduino_PKE_Meter) which includes an OLED and LED wings, however was designed as a toy as all feedback is pre-programmed to occur with button presses and does not include sensors.
+
+
 
